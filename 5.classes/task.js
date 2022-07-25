@@ -173,20 +173,30 @@ class Library {
   }
 
 // 2.4
+
   giveBookByName(bookName) {
     let searchResult; 
-    for (let i=0; i < this.books.length; i++) {
-      if (this.books[i].name === bookName) {
-        searchResult = this.books[i];
-        this.books.splice(i, 1);
-      } else {
-        searchResult = null;
-      }
+    let foundBook = this.books.find(function(book) {
+      return (book.name === bookName);
+    })
+    let index = this.books.findIndex(function(book) {
+      return (book.name === bookName);
+    })
+    if (foundBook) {
+      searchResult = foundBook;
+      this.books.splice(this.books[index], 1);
+    } else {
+      searchResult = null;
     }
     return searchResult;
   }
 
 }
+
+
+
+
+
 
 // 2.5
 
