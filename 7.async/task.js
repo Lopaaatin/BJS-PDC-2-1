@@ -42,10 +42,10 @@ class AlarmClock {
     //   result = (`${hours}:${minutes}`)
     // }
     if (hours < 10) {
-      hours = (`0 + ${hours}`)
+      hours = (`0${hours}`)
     }
     if (minutes < 10) {
-      minutes = (`0 + ${minutes}`)
+      minutes = (`0${minutes}`)
     }
     return (`${hours}:${minutes}`);
   }
@@ -59,7 +59,7 @@ class AlarmClock {
     }
 
     if (this.timerId == null) {
-      this.timerId = setInterval(this.alarmCollection.forEach(checkClock), 60000);
+      this.timerId = setInterval(this.alarmCollection.forEach(checkClock), 1000);
     }
   }
 
