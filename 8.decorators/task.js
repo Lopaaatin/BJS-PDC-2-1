@@ -42,15 +42,15 @@ function debounceDecoratorNew(func, ms) {
 }
 
 
-const sendSignal = () => console.log("Сигнал отправлен");
-const upgradedSendSignal = debounceDecoratorNew(sendSignal, 2000);
-setTimeout(upgradedSendSignal); 
-setTimeout(upgradedSendSignal, 300); 
-setTimeout(upgradedSendSignal, 900); 
-setTimeout(upgradedSendSignal, 1200); 
-setTimeout(upgradedSendSignal, 2300); 
-setTimeout(upgradedSendSignal, 4400); 
-setTimeout(upgradedSendSignal, 4500);
+// const sendSignal = () => console.log("Сигнал отправлен");
+// const upgradedSendSignal = debounceDecoratorNew(sendSignal, 2000);
+// setTimeout(upgradedSendSignal); 
+// setTimeout(upgradedSendSignal, 300); 
+// setTimeout(upgradedSendSignal, 900); 
+// setTimeout(upgradedSendSignal, 1200); 
+// setTimeout(upgradedSendSignal, 2300); 
+// setTimeout(upgradedSendSignal, 4400); 
+// setTimeout(upgradedSendSignal, 4500);
 
 
 // --------------- Задача 3
@@ -73,13 +73,13 @@ function debounceDecorator2(func, ms) {
   return wrapper;
 }
 
-const upgradedSendSignal2 = debounceDecorator2(sendSignal, 2000);
-setTimeout(upgradedSendSignal2); 
-setTimeout(upgradedSendSignal2, 300); 
-setTimeout(upgradedSendSignal2, 900); 
-setTimeout(upgradedSendSignal2, 1200); 
-setTimeout(upgradedSendSignal2, 2300); 
-setTimeout(upgradedSendSignal2, 4400); 
-setTimeout(upgradedSendSignal2, 4500);
+// const upgradedSendSignal2 = debounceDecorator2(sendSignal, 2000);
+// setTimeout(upgradedSendSignal2); 
+// setTimeout(upgradedSendSignal2, 300); 
+// setTimeout(upgradedSendSignal2, 900); 
+// setTimeout(upgradedSendSignal2, 1200); 
+// setTimeout(upgradedSendSignal2, 2300); 
+// setTimeout(upgradedSendSignal2, 4400); 
+// setTimeout(upgradedSendSignal2, 4500);
 
-setTimeout(() => console.log(upgradedSendSignal2.count), 8000);
+// setTimeout(() => console.log(upgradedSendSignal2.count), 8000);
